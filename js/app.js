@@ -34,6 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
     allPanels.forEach((p) => p.hidden = true);
     const target = document.querySelector('.page-panel[data-page="' + key + '"]');
     if (target) target.hidden = false;
+    // Tag the overlay when a report (PDF viewer) panel is showing, so layout can
+    // top-align instead of vertically centering — prevents the panel from visibly
+    // resizing/re-centering while the embedded PDF finishes loading.
+    const isReportPanel = !!(target && target.querySelector(".report-panel"));
+    pageOverlay.classList.toggle("report-open", isReportPanel);
     // Slide in
     pageOverlay.scrollTop = 0;
     pageOverlay.classList.remove("closing");
@@ -63,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     pageOverlay.addEventListener("transitionend", function handler() {
       pageOverlay.removeEventListener("transitionend", handler);
       pageOverlay.classList.remove("closing");
+      pageOverlay.classList.remove("report-open");
       allPanels.forEach((p) => p.hidden = true);
     });
   }
@@ -88,10 +94,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   // ===== Back buttons (one per panel, delegated) =====
+  // A back button with a data-back="<page key>" attribute (used by the written-report
+  // panels) returns to that specific page instead of closing the whole overlay, so
+  // "Back to Projects" from a report goes to the Projects grid rather than the landing menu.
   pageOverlay.addEventListener("click", (e) => {
     if (e.target.matches(".page-back-btn")) {
       e.preventDefault();
-      closePage();
+      const backTo = e.target.getAttribute("data-back");
+      if (backTo) {
+        openPageByKey(backTo);
+      } else {
+        closePage();
+      }
     }
   });
   // ===== Escape key =====
