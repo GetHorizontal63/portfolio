@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body class="landing">
-
   <!-- Full-screen hero -->
   <section class="hero-fullscreen">
     <div class="hero-inner">
@@ -23,7 +22,6 @@
     </div>
     <span class="click-cue">Click anywhere</span>
   </section>
-
   <!-- Full-screen TOC overlay -->
   <div class="toc-overlay" id="tocOverlay">
     <div class="toc-overlay-inner">
@@ -78,11 +76,9 @@
       </div>
     </div>
   </div>
-
   <!-- Page slide-in overlay -->
   <div class="page-overlay" id="pageOverlay">
     <main class="subpage-content" id="pageContent">
-
       <!-- (1) ABOUT ME -->
       <div class="page-panel" data-page="about" hidden>
         <div class="panel content-panel">
@@ -98,7 +94,6 @@
           </div>
         </div>
       </div>
-
       <!-- (2) SKILLS & CERTS -->
       <div class="page-panel" data-page="skills" hidden>
         <div class="panel content-panel">
@@ -148,7 +143,6 @@
           </div>
         </div>
       </div>
-
       <!-- (3) DATA VISUALIZATION -->
       <div class="page-panel" data-page="visualization" hidden>
         <div class="panel content-panel">
@@ -170,7 +164,6 @@
           </div>
         </div>
       </div>
-
       <!-- (4) POPULATION HEALTH ANALYTICS -->
       <div class="page-panel" data-page="ml" hidden>
         <div class="panel content-panel">
@@ -192,7 +185,6 @@
           </div>
         </div>
       </div>
-
       <!-- (5) DATA ENGINEERING -->
       <div class="page-panel" data-page="engineering" hidden>
         <div class="panel content-panel">
@@ -214,7 +206,6 @@
           </div>
         </div>
       </div>
-
       <!-- (6) STATISTICAL ANALYSIS -->
       <div class="page-panel" data-page="statistics" hidden>
         <div class="panel content-panel">
@@ -236,7 +227,6 @@
           </div>
         </div>
       </div>
-
       <!-- (7) GIS -->
       <div class="page-panel" data-page="pm" hidden>
         <div class="panel content-panel">
@@ -256,7 +246,6 @@
           </div>
         </div>
       </div>
-
       <!-- (8) PROJECTS -->
       <div class="page-panel" data-page="projects" hidden>
         <div class="projects-panel">
@@ -309,12 +298,97 @@
             <a class="project-card" id="proj-gis-global-water-levels" data-title="GIS Global Water Levels" href="https://gethorizontal63.github.io/gis_global_water_levels/" target="_blank" rel="noopener noreferrer">
               <div class="project-thumb" style="background-image: url('assets/images/proj-gis-global-water-levels.svg')"></div>
             </a>
+            <a class="project-card report-card" data-page="report-1" data-title="Report: Blood Pressure Value Edit Integrity Analysis">
+              <div class="project-thumb report-thumb"><span class="report-thumb-icon">PDF</span></div>
+            </a>
+            <a class="project-card report-card" data-page="report-2" data-title="Report: Longitudinal Time-Series Analysis of Pharma Industry Payments and Provider Prescription Habits">
+              <div class="project-thumb report-thumb"><span class="report-thumb-icon">PDF</span></div>
+            </a>
+            <a class="project-card report-card" data-page="report-3" data-title="Report: Provider Time Burden from Food & Beverage Payments">
+              <div class="project-thumb report-thumb"><span class="report-thumb-icon">PDF</span></div>
+            </a>
+            <a class="project-card report-card" data-page="report-4" data-title="Report: Correlational Analysis of Industry Payments and GLP-1 Prescribing Among System-Affiliated Providers">
+              <div class="project-thumb report-thumb"><span class="report-thumb-icon">PDF</span></div>
+            </a>
+            <a class="project-card report-card" data-page="report-5" data-title="Report: Care Everywhere Document Pull Anomaly Analysis">
+              <div class="project-thumb report-thumb"><span class="report-thumb-icon">PDF</span></div>
+            </a>
           </div>
           </div>
           <span class="panel-number">(8)</span>
         </div>
       </div>
-
+      <!-- WRITTEN REPORT PANELS -->
+      <div class="page-panel" data-page="report-1" hidden>
+        <div class="panel content-panel report-panel">
+          <div class="panel-text wide">
+            <h2 class="section-heading">Blood Pressure Value Edit Integrity Analysis</h2>
+            <a href="#" class="page-back-btn">← Back to Portfolio</a>
+            <p class="report-excerpt">Excerpt: This report analyzes 20,357 blood pressure readings in a hospital's ambulatory EHR from CY25 that were edited after initial entry, testing whether the population of edits behaves like random correction noise or a systematic pattern. Across every level tested - system, specialty, department, physician, age cohort, and editor relationship - the same signature holds: edits are systematically lower than the original reading (mean systolic change −11.33 mmHg, Cohen's d −0.60), edits compress the value range and converge on round numbers, and the bias is stronger when the edit is made by someone other than the original recorder (68.3% of edits, effect size −0.72 vs. −0.60 overall). The pooled edited population flags CRITICAL on 11 of 13 statistical criteria.</p>
+            <div class="report-viewer">
+              <embed src="assets/reports/pdf_1.pdf" type="application/pdf" class="report-embed" />
+            </div>
+            <a class="report-download" href="assets/reports/pdf_1.pdf" target="_blank" rel="noopener noreferrer">Open Full PDF ↗</a>
+            <span class="panel-number">(R1)</span>
+          </div>
+        </div>
+      </div>
+      <div class="page-panel" data-page="report-2" hidden>
+        <div class="panel content-panel report-panel">
+          <div class="panel-text wide">
+            <h2 class="section-heading">Longitudinal Time-Series Analysis of Pharma Industry Payments and Provider Prescription Habits</h2>
+            <a href="#" class="page-back-btn">← Back to Portfolio</a>
+            <p class="report-excerpt">Excerpt: This report combines a properly specified Granger-style causality test (trend-differenced, permutation-significance, bidirectional) with a manufacturer-concentration analysis of the same Sunshine Act payment data. System-wide, neither direction of the causality test clears significance (Payment→Rx p=0.589; Rx→Payment p=0.351); only a small, nearly symmetric subset of individual providers (8.7%/9.9%) shows an above-chance temporal relationship, pointing toward reverse-targeting rather than a causal payment effect. Separately, payment activity is sharply concentrated (top 5% of companies drive 65.8% of events), and providers most favored by one company are, per a 0.72 Spearman correlation, the same providers broadly paid by dozens of others - though a direct join shows the Granger-significant subset is not disproportionately drawn from these "hub" providers.</p>
+            <div class="report-viewer">
+              <embed src="assets/reports/pdf_2.pdf" type="application/pdf" class="report-embed" />
+            </div>
+            <a class="report-download" href="assets/reports/pdf_2.pdf" target="_blank" rel="noopener noreferrer">Open Full PDF ↗</a>
+            <span class="panel-number">(R2)</span>
+          </div>
+        </div>
+      </div>
+      <div class="page-panel" data-page="report-3" hidden>
+        <div class="panel content-panel report-panel">
+          <div class="panel-text wide">
+            <h2 class="section-heading">Provider Time Burden from Food & Beverage Payments</h2>
+            <a href="#" class="page-back-btn">← Back to Portfolio</a>
+            <p class="report-excerpt">Excerpt: This report measures pure volume (not dollar value) of industry Food & Beverage payment contact per hospital provider against national, North Carolina, and South Carolina benchmarks across the full 2018–2025 CMS Open Payments history. Providers within this system average 15.6 F&B events per provider per year - 2.37x the national rate - and unlike peer groups, which plateaued near their pre-COVID baseline after recovering, this health system's rate has climbed every year since 2022 to an all-time high in 2025 (1.91x national). AbbVie, once its three name-variant records are combined, is the dominant manufacturer at 17,165 events, almost double the next-largest (Pfizer, 8,453).</p>
+            <div class="report-viewer">
+              <embed src="assets/reports/pdf_3.pdf" type="application/pdf" class="report-embed" />
+            </div>
+            <a class="report-download" href="assets/reports/pdf_3.pdf" target="_blank" rel="noopener noreferrer">Open Full PDF ↗</a>
+            <span class="panel-number">(R3)</span>
+          </div>
+        </div>
+      </div>
+      <div class="page-panel" data-page="report-4" hidden>
+        <div class="panel content-panel report-panel">
+          <div class="panel-text wide">
+            <h2 class="section-heading">Correlational Analysis of Industry Payments and GLP-1 Prescribing Among System-Affiliated Providers</h2>
+            <a href="#" class="page-back-btn">← Back to Portfolio</a>
+            <p class="report-excerpt">Excerpt: This report tests association (not causation) between Sunshine Act payments and GLP-1 prescribing within a common June 2023–December 2025 window. Paid providers prescribe at nearly twice the rate of unpaid providers (27.7 vs. 17.6 Rx/month) and payment volume correlates moderately with prescribing volume (Spearman ρ 0.41–0.53); but the sharpest available test of a real influence mechanism - brand-specific loyalty by manufacturer - is weak and points in opposite directions for Novo Nordisk (ρ −0.17) and Lilly (ρ +0.21). A before/after jump around each provider's first payment is fully explained by a placebo test using an unrelated date, since system-wide GLP-1 volume grew 60% over the same window regardless of payments.</p>
+            <div class="report-viewer">
+              <embed src="assets/reports/pdf_4.pdf" type="application/pdf" class="report-embed" />
+            </div>
+            <a class="report-download" href="assets/reports/pdf_4.pdf" target="_blank" rel="noopener noreferrer">Open Full PDF ↗</a>
+            <span class="panel-number">(R4)</span>
+          </div>
+        </div>
+      </div>
+      <div class="page-panel" data-page="report-5" hidden>
+        <div class="panel content-panel report-panel">
+          <div class="panel-text wide">
+            <h2 class="section-heading">Care Everywhere Document Pull Anomaly Analysis</h2>
+            <a href="#" class="page-back-btn">← Back to Portfolio</a>
+            <p class="report-excerpt">Excerpt: This report screens every organization connected to the hospital's Epic system for anomalous document-pull activity using 179 million completed pulls at daily grain (July 2023–June 2026). DM, a medicare payor, is the most extreme outlier (peak z-score of 381.9, a 31.6x increase in average daily volume, sustained since April 2025), with [Associate] ENT & Allergy showing the highest sustained-surge ratio (73.3x) of any organization reviewed; other organizations are grouped into resolved episodic spikes (CW, UH), connection lifecycle events (SCHC, C3HIE, and three discontinued connections), erratic high-volatility organizations (LM, MH), and large scale-driven non-anomalies (PH, FHIE, AH, BSMH). This variation includes a methodology correction showing the "% unspecified encounter" signal doesn't hold up once tested network-wide and demographic/age findings by organization.</p>
+            <div class="report-viewer">
+              <embed src="assets/reports/pdf_5.pdf" type="application/pdf" class="report-embed" />
+            </div>
+            <a class="report-download" href="assets/reports/pdf_5.pdf" target="_blank" rel="noopener noreferrer">Open Full PDF ↗</a>
+            <span class="panel-number">(R5)</span>
+          </div>
+        </div>
+      </div>
       <!-- (8) CONTACT -->
       <div class="page-panel" data-page="contact" hidden>
         <div class="panel content-panel contact-card">
@@ -341,10 +415,8 @@
           <span class="panel-number">(9)</span>
         </div>
       </div>
-
     </main>
   </div>
-
   <script src="js/app.js"></script>
 </body>
 </html>
