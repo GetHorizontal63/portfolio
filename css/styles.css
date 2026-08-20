@@ -246,6 +246,21 @@ a { color: var(--cream); text-decoration: none; }
 .page-overlay .subpage-content .content-panel {
   animation: fadeUp .4s .15s ease both;
 }
+/* Report panels (embedded PDF viewer) are tall and their height isn't known until
+   the embed settles. Top-align them (instead of the default vertical centering) and
+   fade in on opacity only, so nothing visibly resizes/re-centers while the PDF loads. */
+.page-overlay.report-open .subpage-content {
+  align-items: flex-start;
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+.page-overlay.report-open .subpage-content .content-panel {
+  animation: fadeIn .35s .1s ease both;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
 .page-back-btn {
   display: inline-block;
   font-size: 12px;
@@ -504,6 +519,17 @@ a { color: var(--cream); text-decoration: none; }
 .report-panel {
   max-width: 900px;
   width: 100%;
+  contain: layout style;
+}
+.report-note {
+  font-size: 10px;
+  letter-spacing: .3px;
+  color: var(--orange-dark);
+  background: rgba(234, 96, 32, .08);
+  border-left: 3px solid var(--orange);
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  border-radius: 2px;
 }
 .report-excerpt {
   font-style: italic;
