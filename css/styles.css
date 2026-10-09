@@ -426,23 +426,6 @@ a { color: var(--cream); text-decoration: none; }
   background-position: center;
 }
 /* ========== REPORT CARDS & VIEWER ========== */
-.report-thumb {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
-}
-.report-thumb-icon {
-  font-family: var(--font-h1);
-  font-weight: 600;
-  font-size: 22px;
-  letter-spacing: 2px;
-  color: #fff;
-  opacity: .85;
-  border: 2px solid rgba(255, 255, 255, .6);
-  border-radius: 6px;
-  padding: 6px 14px;
-}
 .report-panel {
   max-width: 900px;
   margin: 0 auto;
